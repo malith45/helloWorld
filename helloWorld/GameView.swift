@@ -31,10 +31,13 @@ struct GameView: View {
             Text("Tap the matching color")
                 .font(.headline)
 
-            Rectangle()
-                .fill(colors[targetIndex])
-                .frame(width: 80, height: 80)
-                .cornerRadius(10)
+            if !colors.isEmpty {
+                Rectangle()
+                    .fill(colors[targetIndex])
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(10)
+            }
+
 
             Text("Score: \(score)")
                 .font(.title2)
@@ -73,3 +76,4 @@ struct GameView: View {
         targetIndex = Int.random(in: 0..<totalSquares)
     }
 }
+
