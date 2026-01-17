@@ -6,13 +6,17 @@ enum GameMode: String {
     case hard = "Hard"
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7986e471e789437fbae23e628ce64e8a5d3f02a1
 struct ContentView: View {
 
     @State private var playerName = ""
 
     var body: some View {
         NavigationStack {
+<<<<<<< HEAD
             ZStack {
 
                 // Background gradient
@@ -83,10 +87,35 @@ struct ContentView: View {
                 }
                 .padding()
             }
+=======
+            VStack(spacing: 30) {
+
+                Text("Color Matching Game")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+
+                NavigationLink("Easy Mode") {
+                    GameView(mode: .easy)
+                }
+                .buttonStyle(.borderedProminent)
+
+                NavigationLink("Medium Mode") {
+                    GameView(mode: .medium)
+                }
+                .buttonStyle(.borderedProminent)
+
+                NavigationLink("Hard Mode") {
+                    GameView(mode: .hard)
+                }
+                .buttonStyle(.borderedProminent)
+            }
+            .padding()
+>>>>>>> 7986e471e789437fbae23e628ce64e8a5d3f02a1
         }
     }
 }
 
+<<<<<<< HEAD
 // Reusable menu button
 struct menuButton: View {
     let text: String
@@ -104,3 +133,5 @@ struct menuButton: View {
     }
 }
 
+=======
+>>>>>>> 7986e471e789437fbae23e628ce64e8a5d3f02a1
